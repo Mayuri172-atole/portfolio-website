@@ -1,11 +1,8 @@
 import React from "react";
-// src/main.jsx → CHANGE TO:
-import "../index.css";  // 👈 Go up one level
-
 import ReactDOM from "react-dom/client";
+import { router } from "./routes/Router";
 import { RouterProvider } from "react-router-dom";
-import "./index.css";
-import { router } from "./routes/Router.jsx";  // 👈 ONE import only!
+import "../src/../index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
