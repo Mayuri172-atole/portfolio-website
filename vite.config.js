@@ -3,20 +3,9 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  // base: '/portfolio-website/',  // ❌ REMOVED!
+  // NO base = ROOT paths for GitHub Pages!
   plugins: [react(), tailwindcss()],
-  server: {
-    open: true,
-    host: false,
-    proxy: {
-      "/api": {
-        target: "http://localhost:5000",
-        changeOrigin: true,
-        secure: true,
-      },
-    },
-  },
   build: {
     outDir: 'dist'
   }
-});
+})
