@@ -3,9 +3,8 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  // NO base = ROOT paths for GitHub Pages!
   plugins: [react(), tailwindcss()],
   build: {
-    outDir: 'dist'
+    outDir: 'docs'  // ← CHANGE dist to docs!
   }
 })
