@@ -1,4 +1,7 @@
 import React from "react";
+// src/main.jsx → CHANGE TO:
+import "../index.css";  // 👈 Go up one level
+
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import "./index.css";
