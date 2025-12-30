@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/portfolio-website/',  // 👈 HARDCODED FIX!
+  // base: '/portfolio-website/',  // ❌ REMOVED!
   plugins: [react(), tailwindcss()],
   server: {
     open: true,
