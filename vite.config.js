@@ -5,14 +5,14 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   
-  // 👇 FIX: base = '/' for Vercel/Netlify (not repo name!)
-  const basePath = mode === 'production' ? '/' : '/portfolio-site/';
-  
   return {
-    base: basePath,  // ✅ '/' for production deploy
+    base: '/portfolio-website/',  // 👈 GitHub Pages repo name
     plugins: [react(), tailwindcss()],
     build: {
       outDir: 'dist'
+    },
+    server: {
+      open: true
     }
   };
 });
